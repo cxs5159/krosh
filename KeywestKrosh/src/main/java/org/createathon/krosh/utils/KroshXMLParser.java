@@ -8,7 +8,6 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import org.createathon.krosh.IRAD;
 
 /**
  * @author K25176
@@ -19,9 +18,7 @@ public class KroshXMLParser {
 	@SuppressWarnings("restriction")
 	public static void parser() {
 		  
-		  
-
-			 try {
+/*			 try {
 
 					File file = new File("C:\\file.xml");
 					JAXBContext jaxbContext = JAXBContext.newInstance(IRAD.class);
@@ -34,7 +31,6 @@ public class KroshXMLParser {
 					e.printStackTrace();
 				  }
 
-				}
+				*/
 
-	}
-}
+	}	}
