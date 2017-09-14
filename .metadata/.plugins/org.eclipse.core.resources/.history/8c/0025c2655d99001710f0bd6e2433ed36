@@ -1,0 +1,5 @@
+package org.createathon.krosh;
+
+public class IRAD {
+    public String name;
+}

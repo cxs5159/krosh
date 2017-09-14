@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package org.createathon.krosh.utils;
+
+import java.io.File;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
+import org.createathon.krosh.IRAD;
+
+/**
+ * @author K25176
+ *
+ */
+public class KroshXMLParser {
+
+
+	public static void parser() {
+		  
+		  IRAD irad = new IRAD();
+		  irad.setName("rahul");
+
+	  try {
+
+		File file = new File("C:\\file.xml");
+		JAXBContext jaxbContext = JAXBContext.newInstance(IRAD.class);
+		Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+
+		// output pretty printed
+		jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+		jaxbMarshaller.marshal(irad, file);
+		jaxbMarshaller.marshal(irad, System.out);
+
+	      } catch (JAXBException e) {
+		e.printStackTrace();
+	      }
+
+	}
+}
